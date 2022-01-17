@@ -42,7 +42,7 @@ gcloud services list --enabled --project ${_gcp_pj_id} | grep recaptchaenterpris
 
 ## Cloud Armor とそのルールを作成
 
-+ Cloud Armor を作成します
++ Cloud Armor をのポリシーを作成します
 
 ```
 gcloud beta compute security-policies create ${_common} --project ${_gcp_pj_id}
@@ -81,3 +81,16 @@ gcloud compute backend-services update check-serverless-neg-backend-service-app 
 ---> 設定はこれで完了です :)
 
 
+## 削除方法
+
++ [WIP] Delete Cloud Armor Policy
+
+```
+gcloud beta compute security-policies delete ${_common} --project ${_gcp_pj_id} -q
+```
+
++ サーバレス系を削除する
+
+```
+https://github.com/iganari/handson-serverless-neg
+```
