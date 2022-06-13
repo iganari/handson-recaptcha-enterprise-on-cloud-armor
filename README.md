@@ -13,6 +13,10 @@ reCAPTCHA Enterprise を Cloud Armor を使って実装する
 + Hejdaの見る夢 / Cloud Armor でお手軽に reCAPTCHA を実装してみる
   + https://iganari.hatenablog.com/entry/2022/01/04/234308
 
+![](./img/main.gif)
+
+
+
 ## やってみる
 
 
