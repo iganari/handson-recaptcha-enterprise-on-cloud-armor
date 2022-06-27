@@ -41,7 +41,7 @@ gcloud beta services enable recaptchaenterprise.googleapis.com --project ${_gcp_
 + 有効化出来ているかの確認します
 
 ```
-gcloud services list --enabled --project ${_gcp_pj_id} | grep recaptchaenterprise
+gcloud beta services list --enabled --project ${_gcp_pj_id} | grep recaptchaenterprise
 ```
 
 ## Cloud Armor とそのルールを作成
@@ -67,7 +67,11 @@ gcloud beta compute security-policies rules create 1000 \
   + ローカルに吐き出します
 
 ```
-gcloud beta compute security-policies export ${_common} --file-name=${_common}.json --file-format=json --project ${_gcp_pj_id}
+gcloud beta compute security-policies export ${_common} \
+  --file-name=${_common}.json \
+  --file-format=json \
+  --project ${_gcp_pj_id}
+
 cat ${_common}.json
 ```
 
